@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="var" type="text">
+<button onclick="search()">search</button>
+<p id="github"></p>
+<script>
+    let arrayVN = ['rau','củ','quả'];
+    let arrayEN = ['vegetable','of','fruit'];
+    function search(){
+        let check = document.getElementById('var').value;
+        if(arrayVN.indexOf(check.toLowerCase()) !== -1){
+            document.getElementById('github').innerText = arrayEN[arrayVN.indexOf(check.toLowerCase())];
+        }else{
+            document.getElementById('github').innerText = 'ko co'
+        }
+    }
+</script>
+</body>
+</html>
